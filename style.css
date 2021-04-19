@@ -90,12 +90,6 @@ header {
   flex-direction: column;
 }
 
-.local-nav p {
-  font-family: 'Darker Grotesque', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-}
-
 .fa {
   animation: MoveUpDown 2s linear infinite;
 }
@@ -160,9 +154,12 @@ img {
   margin-bottom: 10px;
 }
 
-
+.animate {
+  visibility: hidden;
+}
 
 .typewriter {
+  visibility: visible;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid orange; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
