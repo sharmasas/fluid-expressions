@@ -11,7 +11,7 @@ $(document).ready(function() {
 var controller = new ScrollMagic.Controller({
   globalSceneOptions: {
     duration: $('section').height(),
-    reverse: true,
+    reverse: true
   }
 });
 
@@ -77,11 +77,12 @@ controller.scrollTo(function(target) {
 
 
 // Custom CSS to make text blink
-var scene = new ScrollMagic.Scene({triggerElement: "#trigger1"})
+var scene = new ScrollMagic.Scene({triggerElement: ".trigger"})
 					// trigger animation by adding a css class
-					.setClassToggle("#animate1", "typewriter")
-          .setPin("#animate1")
+          .setPin(".animate")					
+          .setClassToggle(".animate", "typewriter")
 					.addTo(controller);
+
 
 
 //  Bind scroll to anchor links using Vanilla JavaScript
@@ -121,6 +122,8 @@ window.location.disabled= linkLocation;
   return this;
 };
 }(jQuery));
+
+
 
 //NEXT BUTTON
 
