@@ -77,9 +77,10 @@ controller.scrollTo(function(target) {
 
 
 // Custom CSS to make text blink
-var scene = new ScrollMagic.Scene({triggerElement: ".trigger", reverse: false})
+var scene = new ScrollMagic.Scene({triggerElement: "#trigger1"})
 					// trigger animation by adding a css class
-					.setClassToggle(".animate", "typewriter")
+					.setClassToggle("#animate1", "typewriter")
+          .setPin("#animate1")
 					.addTo(controller);
 
 
