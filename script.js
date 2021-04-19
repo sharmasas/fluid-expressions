@@ -54,7 +54,7 @@ for(var key in scenes) {
     new ScrollMagic.Scene({ 
         triggerElement: '#' + prop 
         })
-        .setClassToggle('#' + obj[prop], 'active')
+        .setClassToggle('#' + obj[prop], 'active', 'typewriter')
         .addTo(controller);
   }
 }
@@ -72,6 +72,8 @@ controller.scrollTo(function(target) {
     },
     ease : Cubic.easeInOut
   });
+  
+  
 });
 
 
