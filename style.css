@@ -21,10 +21,9 @@ h3 {
 
 h1 {
   font-family: 'Darker Grotesque', sans-serif;
-/*   margin: auto; */
-  font-size: 8vw;
+  font-size: 6vw;
   font-weight: 300;
-  padding: 10px;
+  padding-top: 30vh;
 }
 
 /* Overall Links */
@@ -80,12 +79,12 @@ header {
   align-items: center;
 }
 
-.local-nav .js-next {
+/* .local-nav .js-next {
   position: fixed;
   left: 50vw;
   top: 70vh;
   align-items: center;
-}
+} */
 
 .js-prev, .js-next {
   align-items: center;
@@ -163,10 +162,12 @@ img {
   margin-bottom: 10px;
 }
 
+/* Typewriter Animation */
+
 .typewriter {
   visibility: visible;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: .15em solid orange; /* The typwriter cursor */
+  border-right: .15em solid #8FCA54; /* The typwriter cursor */
   white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   animation: 
@@ -183,5 +184,5 @@ img {
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
-  50% { border-color: orange; }
+  50% { border-color: #8FCA54; }
 }
