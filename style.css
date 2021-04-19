@@ -1,11 +1,155 @@
-/* CSS files add styling rules to your content */
 
+html,
 body {
-  font-family: helvetica, arial, sans-serif;
-  margin: 2em;
+  margin: 0;
+  height: 100%
+}
+
+a {
+  font-family: 'Space Mono', monospace;
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  color: #777;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+a.active {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav {
+  pointer-events: none;
+}
+
+.local-nav .js-prev {
+  position: fixed;
+  left: 50vw;
+  top: 2vh;
+  align-items: center;
+}
+
+.local-nav .js-next {
+  position: fixed;
+  left: 50vw;
+  top: 90vh;
+  align-items: center;
+}
+
+.js-prev, .js-next {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.local-nav p {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.fa {
+  animation: MoveUpDown 2s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+h3, p {
+  font-family: 'Space Mono', monospace;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 18px; 
 }
 
 h1 {
-  font-style: italic;
-  color: #373fff;
+  font-family: 'Darker Grotesque', sans-serif;
+  margin: auto;
+  font-size: 8vw;
+  font-weight: 300;
+  padding: 10px;
+}
+
+header {
+  position: fixed;
+  left: 20px;
+}
+
+.anchor-nav {
+  display:flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.anchor-nav a {
+  flex-grow: 1;
+  display:flex; 
+  align-items:center;
+  border-bottom:1px solid #777;
+}
+
+.anchor-nav a:last-child {
+  border-bottom:none;
+}
+
+section {
+  display: flex;
+/*   justify-content: center; */
+  align-items: center;
+  text-align: center;
+  color: #EFEFEF;
+}
+
+.full-screen {
+ min-height: 100vh; */
+}
+
+.hero {
+	height:100vh;
+  background-color: #000;
+  background-image: url('https://cdn.glitch.com/184b84fb-a7f7-49b2-80dc-92d99190253f%2Ftrip_to_moon2.png?v=1618600063652');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.white {
+	background-color: #fff;
+}
+.black {
+	background-color: #000;
+}
+
+.box {
+  margin-top: -120px;
+  margin-left: 20vw;
+  width: 50vw;
+  padding-left: 100px;
+  text-align: left;
+}
+
+.box .data {
+  width: 50vw;
+}
+
+img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#section-1 > div > div > div {
+  margin-top: 150px;
 }
