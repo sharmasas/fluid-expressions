@@ -2,7 +2,7 @@
 $(document).ready(function() { 
   $("h1").pagefade(1000, 1000); 
   $("nav").pagefade(2000, 2000); 
-  $(".js-next").pagefade(3000, 3000); 
+  $(".js-next, .js-prev").pagefade(3000, 3000); 
 });
 
 // Set up Controller
@@ -68,7 +68,7 @@ controller.scrollTo(function(target) {
   TweenMax.to(window, 2, {
     scrollTo : {
       y : target,
-      autoKill : true // Allow scroll position to change outside itself
+      autoKill : false // Allow scroll position to change outside itself
     },
     ease : Cubic.easeInOut
   })
@@ -77,25 +77,24 @@ controller.scrollTo(function(target) {
 
 
 // Custom CSS to make text blink
+
 var sceneA = new ScrollMagic.Scene({triggerElement: "#trigger1"})
 					// trigger animation by adding a css class
-          .setPin(".animate")					
-          .setClassToggle(".animate", "typewriter")
+          .setPin("#animate1")					
+          .setClassToggle("#animate1", "typewriter")
 					.addTo(controller);
 
-// // Custom CSS to make text blink
-// var sceneB = new ScrollMagic.Scene({triggerElement: "#trigger2"})
-// 					// trigger animation by adding a css class
-//           // .setPin(".animate")					
-//           .setClassToggle(".animate", "typewriter")
-// 					.addTo(controller);
+var sceneB = new ScrollMagic.Scene({triggerElement: "#trigger2"})
+					// trigger animation by adding a css class
+          //.setPin("#animate2")					
+          .setClassToggle("#animate2", "typewriter")
+					.addTo(controller);
 
-// // Custom CSS to make text blink
-// var sceneC = new ScrollMagic.Scene({triggerElement: "#trigger3"})
-// 					// trigger animation by adding a css class
-//           // .setPin(".animate")					
-//           .setClassToggle(".animate", "typewriter")
-// 					.addTo(controller);
+var sceneC = new ScrollMagic.Scene({triggerElement: "#trigger3"})
+					// trigger animation by adding a css class
+          // .setPin("#animate3")					
+          .setClassToggle("#animate3", "typewriter")
+					.addTo(controller);
 
 
 
