@@ -22,9 +22,9 @@ a.active {
   text-decoration: none;
 }
 
-nav {
+/* nav {
   pointer-events: none;
-}
+} */
 
 .local-nav .js-prev {
   position: fixed;
@@ -114,9 +114,9 @@ section {
   color: #EFEFEF;
 }
 
-.full-screen {
- min-height: 100vh; */
-}
+/* .full-screen {
+ height: 100vh;
+} */
 
 .hero {
 	height:100vh;
@@ -126,15 +126,17 @@ section {
   background-size: cover;
   background-position: center;
 }
+
 .white {
 	background-color: #fff;
 }
 .black {
-	background-color: #000;
+/* 	height:1000px; */
+  background-color: #000;
 }
 
 .box {
-  margin-top: -120px;
+/*   margin-top: -100px; */
   margin-left: 20vw;
   width: 50vw;
   padding-left: 100px;
@@ -145,11 +147,11 @@ section {
   width: 50vw;
 }
 
-img {
+/* img {
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 #section-1 > div > div > div {
   margin-top: 150px;
-}
+} */

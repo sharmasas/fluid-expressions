@@ -9,8 +9,8 @@ $(document).ready(function() {
 // Init controller
 var controller = new ScrollMagic.Controller({
   globalSceneOptions: {
-    duration: $('section').height() * .75,
-    reverse: true
+    duration: $('section').height(),
+    reverse: true,
   }
 });
 
@@ -57,6 +57,41 @@ for(var key in scenes) {
         .addTo(controller);
   }
 }
+
+
+
+// Change behaviour of controller
+// to animate scroll instead of jump
+controller.scrollTo(function(target) {
+
+  TweenMax.to(window, 2, {
+    scrollTo : {
+      y : target,
+      autoKill : true // Allow scroll position to change outside itself
+    },
+    ease : Cubic.easeInOut
+  });
+});
+
+
+//  Bind scroll to anchor links using Vanilla JavaScript
+var anchor_nav = document.querySelector('.anchor-nav');
+
+anchor_nav.addEventListener('click', function(e) {
+  var target = e.target,
+      id     = target.getAttribute('href');
+
+  if(id !== null) {
+    if(id.length > 0) {
+      e.preventDefault();
+      controller.scrollTo(id);
+
+      if(window.history && window.history.pushState) {
+        history.pushState("", document.title, id);
+      }
+    }
+  }
+});
 
 
 
