@@ -54,7 +54,7 @@ for(var key in scenes) {
     new ScrollMagic.Scene({ 
         triggerElement: '#' + prop 
         })
-        .setClassToggle('#' + obj[prop], 'active', 'typewriter')
+        .setClassToggle('#' + obj[prop], 'active')
         .addTo(controller);
   }
 }
@@ -71,10 +71,16 @@ controller.scrollTo(function(target) {
       autoKill : true // Allow scroll position to change outside itself
     },
     ease : Cubic.easeInOut
-  });
-  
+  })
   
 });
+
+
+// Custom CSS to make text blink
+var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", reverse: false})
+					// trigger animation by adding a css class
+					.setClassToggle(".animate", "typewriter")
+					.addTo(controller);
 
 
 //  Bind scroll to anchor links using Vanilla JavaScript
