@@ -77,11 +77,26 @@ controller.scrollTo(function(target) {
 
 
 // Custom CSS to make text blink
-var scene = new ScrollMagic.Scene({triggerElement: ".trigger"})
+var sceneA = new ScrollMagic.Scene({triggerElement: "#trigger1"})
 					// trigger animation by adding a css class
           .setPin(".animate")					
           .setClassToggle(".animate", "typewriter")
 					.addTo(controller);
+
+// // Custom CSS to make text blink
+// var sceneB = new ScrollMagic.Scene({triggerElement: "#trigger2"})
+// 					// trigger animation by adding a css class
+//           // .setPin(".animate")					
+//           .setClassToggle(".animate", "typewriter")
+// 					.addTo(controller);
+
+// // Custom CSS to make text blink
+// var sceneC = new ScrollMagic.Scene({triggerElement: "#trigger3"})
+// 					// trigger animation by adding a css class
+//           // .setPin(".animate")					
+//           .setClassToggle(".animate", "typewriter")
+// 					.addTo(controller);
+
 
 
 
