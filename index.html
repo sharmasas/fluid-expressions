@@ -1,28 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Hello!</title>
-    
+    <title>Fluid Expressions</title>
+
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's javascript file -->
-    <script src="/script.js" defer></script>
-  </head>  
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500&family=Space+Mono:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/style.css" />
+  </head>
   <body>
-    <h1>Hi there!</h1>
     
-    <p>
-      I'm your cool new webpage. Made with <a href="https://glitch.com">Glitch</a>!
-    </p>
+<!--     <header role="banner">
+      <nav class="anchor-nav" role="navigation">
+        <a class="js-list-item" href="#intro" id="intro-anchor">Fluid <br />Expressions</a>
+        <a class="js-list-item" href="#section-1" id="anchor1">Questions</a>
+        <a class="js-list-item" href="#section-2" id="anchor2">T-132 Days</a>
+        <a class="js-list-item" href="#section-3" id="anchor3">T-85 Days</a>
+      </nav>
+      <div class="local-nav">
+        <a class="js-prev" href="#">
+          <i class="fa fa-angle-up" style="font-size:36px"></i>
+          <p>
+            Previous
+          </p>
+        </a>
+        <a class="js-next" href="#">
+          <p>
+            Scroll Down
+          </p>
+          <i class="fa fa-angle-down" style="font-size:36px"></i>
+        </a>
+      </div>
+    </header> -->
 
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js" defer></script>
+    <main class="full-screen" id="intro" role="main">
+      <section id="titlechart">
+	<div id="description">
+		<h1 class="badge gsap">Custom Containers</h1>
+		<h2>One page can have multiple scroll containers.</h2>
+		<p>
+			A scroll container can be any element (usually a div though), that has scrolling happening inside of it.
+		</p>
+		<p>
+			While textareas have scrolling enabled by default, it needs to be explicitly set for divs, using the css style <code>overflow: scroll</code>.
+		</p>
+		<a href="#" class="viewsource">view source</a>
+	</div>
+</section>
+<div class="spacer s2"></div>
+<div class="spacer s0"></div>
+<section class="demowrap">
+	<div id="container1" class="scrollContainer" style="width: 500px; height: 300px; border: 1px solid blue; overflow: scroll;">
+		<section class="demo">
+			<div class="spacer s2"></div>
+			<div class="spacer s0" id="trigger1"></div>
+			<div class="animated box1 red disablePointerEvents">
+				<p>Wait for green.</p>
+				<a href="#" class="viewsource">view source</a>
+			</div>
+			<div class="spacer s3"></div>
+			<script>
+				$(function () { // wait for document ready
+					// init controller
+					var controller1 = new ScrollMagic.Controller({container: "#container1"});
+
+					// build scene
+					var scene = new ScrollMagic.Scene({triggerElement: "#trigger1", duration: 300})
+						.addTo(controller1)
+						.setTween(TweenMax.to("#container1 .animated", 0.5, {backgroundColor: "green"}))
+						.addIndicators() // add indicators (requires plugin)
+						.setPin("#container1 .animated");
+				});
+			</script>
+		</section>
+</div>
+</section>
+<div class="spacer s3"></div>
+<div class="spacer s0"></div>
+<section class="demowrap">
+	<div id="container2" class="scrollContainer horizontal" style="width: 500px; height: 300px; border: 1px solid blue; overflow: scroll;">
+		<section class="demo">
+			<div class="spacer s4"></div>
+			<div class="spacer s0" id="trigger2"></div>
+			<div class="animated box1 red disablePointerEvents">
+				<p>Wait for green.</p>
+				<a href="#" class="viewsource">view source</a>
+			</div>
+			<div class="spacer s4"></div>
+			<script>
+				$(function () { // wait for document ready
+					// init controller
+					var controller2 = new ScrollMagic.Controller({container: "#container2", vertical: false});
+
+					// build scene
+					var scene2 = new ScrollMagic.Scene({triggerElement: "#trigger2", duration: 300})
+						.addTo(controller2)
+						.addIndicators() // add indicators (requires plugin)
+						.setTween(TweenMax.to("#container2 .animated", 0.5, {backgroundColor: "green"}))
+						.setPin("#container2 .animated");
+				});
+			</script>
+		</section>
+	</div>
+</section>
+<div class="spacer s5"></div>
+    </main>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenMax.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/ScrollToPlugin.min.js"></script>
+  <!-- import the webpage's javascript file -->
+<!--   <script src="/script.js" defer></script> -->
 </html>
