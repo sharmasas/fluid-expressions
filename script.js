@@ -1,8 +1,7 @@
 // Starting with Fade In function
 $(document).ready(function() { 
   $("h1").pagefade(1000, 1000); 
-  $("nav").pagefade(2000, 2000); 
-  $(".js-next, .js-prev").pagefade(3000, 3000); 
+  $("nav, .title-text, .js-next").pagefade(3000, 3000); 
 });
 
 // Set up Controller
