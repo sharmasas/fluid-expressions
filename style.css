@@ -21,10 +21,12 @@ h3 {
 
 h1 {
   font-family: 'Darker Grotesque', sans-serif;
-  font-size: 6vw;
+  font-size: 80px;
   font-weight: 300;
-  padding-top: 30vh;
-  margin-bottom: 40px;
+  padding-top: 25vh;
+  margin-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* Overall Links */
@@ -142,9 +144,9 @@ section {
 }
 
 .box {
-  margin-left: 10vw;
+/*   margin-left: 10vw; */
   width: 50vw;
-  padding-left: 100px;
+/*   padding-left: 100px; */
   text-align: left;
 }
 
