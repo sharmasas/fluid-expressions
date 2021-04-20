@@ -24,6 +24,7 @@ h1 {
   font-size: 6vw;
   font-weight: 300;
   padding-top: 30vh;
+  margin-bottom: 40px;
 }
 
 /* Overall Links */
@@ -142,13 +143,13 @@ section {
 
 .box {
   margin-left: 10vw;
-  width: 60vw;
+  width: 50vw;
   padding-left: 100px;
   text-align: left;
 }
 
 .box .data {
-  width: 60vw;
+  width: 50vw;
 }
 
 .box p {
@@ -178,7 +179,7 @@ img {
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 60vw }
+  to { width: 50vw }
 }
 
 /* The typewriter cursor effect */
