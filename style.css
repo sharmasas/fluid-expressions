@@ -141,8 +141,8 @@ section {
  padding-bottom: 20vh;
 }
 
-#section-1, #section-3 {
-  padding-bottom: 90vh;
+#section-1 {
+  padding-bottom: 90vh; /*small sections */
 }
 
 .box {
