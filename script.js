@@ -41,6 +41,12 @@ var scenes = {
   'scene5': {
     'section-4': 'anchor4'
   },
+    'scene6': {
+    'section-5': 'anchor5'
+  },
+    'scene7': {
+    'section-6': 'anchor6'
+  }
 }
 
 for(var key in scenes) {
@@ -102,6 +108,18 @@ var sceneD = new ScrollMagic.Scene({triggerElement: "#trigger4"})
 					// trigger animation by adding a css class
           // .setPin("#animate3")					
           .setClassToggle("#animate4", "typewriter")
+					.addTo(controller);
+
+var sceneE = new ScrollMagic.Scene({triggerElement: "#trigger5"})
+					// trigger animation by adding a css class
+          // .setPin("#animate3")					
+          .setClassToggle("#animate5", "typewriter")
+					.addTo(controller);
+
+var sceneF = new ScrollMagic.Scene({triggerElement: "#trigger6"})
+					// trigger animation by adding a css class
+          // .setPin("#animate3")					
+          .setClassToggle("#animate6", "typewriter")
 					.addTo(controller);
 
 
