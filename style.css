@@ -124,7 +124,7 @@ section {
 .hero {
 	height:100vh;
   background-color: #000;
-  background-image: url('https://cdn.glitch.com/184b84fb-a7f7-49b2-80dc-92d99190253f%2Ftrip_to_moon2.png?v=1618600063652');
+  background-image: url('https://cdn.glitch.com/83117164-82ff-496f-ac88-45a0a9249c02%2Ftrip_to_moon2.png?v=1618968879758');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -137,7 +137,7 @@ section {
 .black {
  background-color: #000;
  padding-top: 10vh;
- padding-bottom: 10vh;
+ padding-bottom: 20vh;
 }
 
 #section-1, #section-3 {
@@ -153,6 +153,7 @@ section {
 
 .box .data {
   width: 50vw;
+  margin-top: 20px;
 }
 
 .box p {
