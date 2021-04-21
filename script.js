@@ -41,11 +41,23 @@ var scenes = {
   'scene5': {
     'section-4': 'anchor4'
   },
-    'scene6': {
+  'scene6': {
     'section-5': 'anchor5'
   },
-    'scene7': {
+  'scene7': {
     'section-6': 'anchor6'
+  },
+  'scene8': {
+    'section-7': 'anchor7'
+  },
+  'scene9': {
+    'section-8': 'anchor8'
+  },
+  'scene10': {
+    'section-9': 'anchor9'
+  },
+  'scene11': {
+    'section-10': 'anchor10'
   }
 }
 
@@ -121,6 +133,33 @@ var sceneF = new ScrollMagic.Scene({triggerElement: "#trigger6"})
           // .setPin("#animate3")					
           .setClassToggle("#animate6", "typewriter")
 					.addTo(controller);
+
+var sceneG = new ScrollMagic.Scene({triggerElement: "#trigger7"})
+					// trigger animation by adding a css class
+          // .setPin("#animate3")					
+          .setClassToggle("#animate7", "typewriter")
+					.addTo(controller);
+
+
+var sceneH = new ScrollMagic.Scene({triggerElement: "#trigger8"})
+					// trigger animation by adding a css class
+          // .setPin("#animate3")					
+          .setClassToggle("#animate8", "typewriter")
+					.addTo(controller);
+
+
+var sceneI = new ScrollMagic.Scene({triggerElement: "#trigger9"})
+					// trigger animation by adding a css class
+          // .setPin("#animate3")					
+          .setClassToggle("#animate9", "typewriter")
+					.addTo(controller);
+
+var sceneJ = new ScrollMagic.Scene({triggerElement: "#trigger10"})
+					// trigger animation by adding a css class
+          // .setPin("#animate3")					
+          .setClassToggle("#animate10", "typewriter")
+					.addTo(controller);
+
 
 
 //  Bind scroll to anchor links using Vanilla JavaScript
