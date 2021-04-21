@@ -58,6 +58,9 @@ var scenes = {
   },
   'scene11': {
     'section-10': 'anchor10'
+  },
+  'scene12': {
+    'section-11': 'anchor11'
   }
 }
 
@@ -158,6 +161,12 @@ var sceneJ = new ScrollMagic.Scene({triggerElement: "#trigger10"})
 					// trigger animation by adding a css class
           // .setPin("#animate3")					
           .setClassToggle("#animate10", "typewriter")
+					.addTo(controller);
+
+var sceneK = new ScrollMagic.Scene({triggerElement: "#trigger11"})
+					// trigger animation by adding a css class
+          .setPin("#animate11")					
+          .setClassToggle("#animate11", "typewriter")
 					.addTo(controller);
 
 
