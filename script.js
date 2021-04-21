@@ -37,7 +37,10 @@ var scenes = {
   },
   'scene4': {
     'section-3': 'anchor3'
-  }
+  },
+  'scene5': {
+    'section-4': 'anchor4'
+  },
 }
 
 for(var key in scenes) {
@@ -95,7 +98,11 @@ var sceneC = new ScrollMagic.Scene({triggerElement: "#trigger3"})
           .setClassToggle("#animate3", "typewriter")
 					.addTo(controller);
 
-
+var sceneD = new ScrollMagic.Scene({triggerElement: "#trigger4"})
+					// trigger animation by adding a css class
+          // .setPin("#animate3")					
+          .setClassToggle("#animate4", "typewriter")
+					.addTo(controller);
 
 
 //  Bind scroll to anchor links using Vanilla JavaScript
@@ -158,20 +165,20 @@ $('.js-next').click(function(e) {
 	e.preventDefault();
 });
 
-$('.js-prev').click(function(e) {
+// $('.js-prev').click(function(e) {
 
-  var selected = $(".js-list-item.active");
-  var anchors = $(".js-list-item");
+//   var selected = $(".js-list-item.active");
+//   var anchors = $(".js-list-item");
 
-  var pos = anchors.index(selected);
-  var next = anchors.get(pos+1);
-  var prev = anchors.get(pos-1);
+//   var pos = anchors.index(selected);
+//   var next = anchors.get(pos+1);
+//   var prev = anchors.get(pos-1);
   
-  $(selected).removeClass("active");
-  $(prev).addClass("active");
+//   $(selected).removeClass("active");
+//   $(prev).addClass("active");
   
-  var id = $(prev).attr("href");
-  controller.scrollTo(id);
+//   var id = $(prev).attr("href");
+//   controller.scrollTo(id);
   
-	e.preventDefault();
-});
+// 	e.preventDefault();
+// });
