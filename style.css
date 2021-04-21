@@ -122,10 +122,19 @@ section {
   flex-direction: column;
 }
 
-.hero, .footer {
+.hero {
 	height:100vh;
   background-color: #000;
   background-image: url('https://cdn.glitch.com/83117164-82ff-496f-ac88-45a0a9249c02%2Ftrip_to_moon2.png?v=1618968879758');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footer {
+	height:100vh;
+  background-color: #000;
+  background-image: url('https://cdn.glitch.com/83117164-82ff-496f-ac88-45a0a9249c02%2Fsunrise.gif?v=1619040502157');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
