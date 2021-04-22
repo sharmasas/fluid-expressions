@@ -213,44 +213,44 @@ window.location.disabled= linkLocation;
 //SIMPLE NEXT BUTTON
 
 
-$('.js-next').click(function(e) {
+// $('.js-next').click(function(e) {
 
-//   var selected = $(".js-list-item.active");
-//   var anchors = $(".js-list-item");
+// //   var selected = $(".js-list-item.active");
+// //   var anchors = $(".js-list-item");
 
-//   var pos = anchors.index(selected);
-//   var next = anchors.get(pos+1);
-//   var prev = anchors.get(pos-1);
+// //   var pos = anchors.index(selected);
+// //   var next = anchors.get(pos+1);
+// //   var prev = anchors.get(pos-1);
   
-//   $(selected).removeClass("active");
-//   $(next).addClass("active");
+// //   $(selected).removeClass("active");
+// //   $(next).addClass("active");
   
-//   var id = $(next).attr("href");
-  controller.scrollTo("#section-1");
+// //   var id = $(next).attr("href");
+//   controller.scrollTo("#section-1");
   
-	e.preventDefault();
-});
+// 	e.preventDefault();
+// });
 
 
 // FULL FUNCTION NEXT BUTTONS
 
-// $('.js-next').click(function(e) {
+$('.js-next').click(function(e) {
 
-//   var selected = $(".js-list-item.active");
-//   var anchors = $(".js-list-item");
+  var selected = $(".js-list-item.active");
+  var anchors = $(".js-list-item");
 
-//   var pos = anchors.index(selected);
-//   var next = anchors.get(pos+1);
-//   var prev = anchors.get(pos-1);
+  var pos = anchors.index(selected);
+  var next = anchors.get(pos+1);
+  var prev = anchors.get(pos-1);
   
-//   $(selected).removeClass("active");
-//   $(next).addClass("active");
+  $(selected).removeClass("active");
+  $(next).addClass("active");
   
-//   var id = $(next).attr("href");
-//   controller.scrollTo(id);
+  var id = $(next).attr("href");
+  controller.scrollTo(id);
   
-// 	e.preventDefault();
-// });
+	e.preventDefault();
+});
 
 // $('.js-prev').click(function(e) {
 

@@ -79,17 +79,17 @@ header {
 
 .local-nav .js-prev {
   position: fixed;
-  left: 50vw;
-  top: 2vh;
+  left: 90vw;
+  top: 60vh;
   align-items: center;
 }
 
-/* .local-nav .js-next {
+.local-nav .js-next {
   position: fixed;
-  left: 50vw;
-  top: 70vh;
+  right: 5vw;
+  bottom: 10vh;
   align-items: center;
-} */
+}
 
 .js-prev, .js-next {
   align-items: center;
@@ -151,7 +151,7 @@ section {
 }
 
 #section-1, #section-10 {
-  padding-bottom: 90vh; /*small sections */
+  padding-bottom: 70vh; /*small sections */
 }
 
 .box {
@@ -159,6 +159,7 @@ section {
   width: 50vw;
 /*   padding-left: 100px; */
   text-align: left;
+  padding-bottom: 35vh;
 }
 
 .box .data {
