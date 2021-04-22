@@ -134,10 +134,13 @@ section {
 .footer {
 	height:90vh;
   background-color: #000;
-  background-image: url('https://cdn.glitch.com/83117164-82ff-496f-ac88-45a0a9249c02%2Fsunrise.gif?v=1619040502157');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.background {
+  background-image: url('https://cdn.glitch.com/83117164-82ff-496f-ac88-45a0a9249c02%2Fsunrise.gif?v=1619040502157');
 }
 
 .white {

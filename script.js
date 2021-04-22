@@ -163,15 +163,14 @@ var sceneJ = new ScrollMagic.Scene({triggerElement: "#trigger10"})
           .setClassToggle("#animate10", "typewriter")
 					.addTo(controller);
 
-var sceneK = new ScrollMagic.Scene({triggerElement: "#trigger11"})
+var sceneK = new ScrollMagic.Scene({triggerElement: "#trigger11", offset: 10})
 					// trigger animation by adding a css class
-          .setPin("#animate11")					
-          .setClassToggle("#animate11", "typewriter")
+          .setClassToggle("#section11", "background")
 					.addTo(controller);
 
-var sceneL = new ScrollMagic.Scene({triggerElement: "#trigger11"})
+var sceneL = new ScrollMagic.Scene({triggerElement: "#trigger12"})
 					// trigger animation by adding a css class
-          .setClassToggle("#section-11", "footer")
+          .setClassToggle("#animate12", "typewriter")
 					.addTo(controller);
 
 
@@ -216,25 +215,47 @@ window.location.disabled= linkLocation;
 
 
 
-//NEXT BUTTON
+//SIMPLE NEXT BUTTON
+
 
 $('.js-next').click(function(e) {
 
-  var selected = $(".js-list-item.active");
-  var anchors = $(".js-list-item");
+//   var selected = $(".js-list-item.active");
+//   var anchors = $(".js-list-item");
 
-  var pos = anchors.index(selected);
-  var next = anchors.get(pos+1);
-  var prev = anchors.get(pos-1);
+//   var pos = anchors.index(selected);
+//   var next = anchors.get(pos+1);
+//   var prev = anchors.get(pos-1);
   
-  $(selected).removeClass("active");
-  $(next).addClass("active");
+//   $(selected).removeClass("active");
+//   $(next).addClass("active");
   
-  var id = $(next).attr("href");
-  controller.scrollTo(id);
+//   var id = $(next).attr("href");
+  controller.scrollTo("#section-1");
   
 	e.preventDefault();
 });
+
+
+// FULL FUNCTION NEXT BUTTONS
+
+// $('.js-next').click(function(e) {
+
+//   var selected = $(".js-list-item.active");
+//   var anchors = $(".js-list-item");
+
+//   var pos = anchors.index(selected);
+//   var next = anchors.get(pos+1);
+//   var prev = anchors.get(pos-1);
+  
+//   $(selected).removeClass("active");
+//   $(next).addClass("active");
+  
+//   var id = $(next).attr("href");
+//   controller.scrollTo(id);
+  
+// 	e.preventDefault();
+// });
 
 // $('.js-prev').click(function(e) {
 
