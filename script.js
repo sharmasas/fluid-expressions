@@ -252,6 +252,8 @@ $('.js-next').click(function(e) {
 	e.preventDefault();
 });
 
+// FULL PREVIOUS BUTTON
+
 // $('.js-prev').click(function(e) {
 
 //   var selected = $(".js-list-item.active");
