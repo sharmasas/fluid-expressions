@@ -100,13 +100,14 @@ header {
 .fa {
   width: 24px;
   opacity: 0.4;
+  transition: 0.5s;
   animation: MoveUpDown 2s linear infinite;
 }
 
-.js-next:hover {
+.fa:hover {
   opacity: 1.0;
-  transition: 0.5s;
 }
+
 
 @keyframes MoveUpDown {
   0%, 100% {
