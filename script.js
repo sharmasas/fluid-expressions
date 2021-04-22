@@ -163,14 +163,9 @@ var sceneJ = new ScrollMagic.Scene({triggerElement: "#trigger10"})
           .setClassToggle("#animate10", "typewriter")
 					.addTo(controller);
 
-var sceneK = new ScrollMagic.Scene({triggerElement: "#trigger11", offset: 10})
+var sceneK = new ScrollMagic.Scene({triggerElement: "#trigger11"})
 					// trigger animation by adding a css class
-          .setClassToggle("#section11", "background")
-					.addTo(controller);
-
-var sceneL = new ScrollMagic.Scene({triggerElement: "#trigger12"})
-					// trigger animation by adding a css class
-          .setClassToggle("#animate12", "typewriter")
+          .setClassToggle("#animate11", "typewriter")
 					.addTo(controller);
 
 

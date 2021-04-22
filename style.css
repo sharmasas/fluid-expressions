@@ -137,9 +137,6 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
-
-.background {
   background-image: url('https://cdn.glitch.com/83117164-82ff-496f-ac88-45a0a9249c02%2Fsunrise.gif?v=1619040502157');
 }
 
@@ -153,7 +150,7 @@ section {
  padding-bottom: 20vh;
 }
 
-#section-1, #section-9, #section-10 {
+#section-1, #section-10 {
   padding-bottom: 90vh; /*small sections */
 }
 
