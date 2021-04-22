@@ -10,12 +10,12 @@ h3, p {
   font-family: 'Space Mono', monospace;
   margin: 0;
   padding: 0;
-  font-size: 11px;
+  font-size: 14px;
   margin-bottom: 15px;
 }
 
 h3 {
-  font-size: 16px; 
+  font-size: 18px; 
   letter-spacing: .075em; /* Adjust as needed */
   margin-bottom: 10px;
   visibility: hidden;
