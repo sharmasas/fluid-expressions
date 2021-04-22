@@ -99,7 +99,7 @@ controller.scrollTo(function(target) {
 });
 
 
-// Custom CSS to make text blink
+// ScrollMagic Animation for Custom CSS to make text blink
 
 var sceneA = new ScrollMagic.Scene({triggerElement: "#trigger1"})
 					// trigger animation by adding a css class
