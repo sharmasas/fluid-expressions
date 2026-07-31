@@ -89,6 +89,7 @@ header {
   right: 5vw;
   bottom: 10vh;
   align-items: center;
+  z-index: 1000;
 }
 
 .js-prev, .js-next {
@@ -133,7 +134,7 @@ section {
 .hero {
 	height:100vh;
   background-color: #000;
-  background-image: url('https://cdn.glitch.com/83117164-82ff-496f-ac88-45a0a9249c02%2Ftrip_to_moon2.png?v=1618968879758');
+  background-image: url('glitch-assets/trip_to_moon2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -145,7 +146,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url('https://cdn.glitch.com/83117164-82ff-496f-ac88-45a0a9249c02%2Fsunrise.gif?v=1619040502157');
+  background-image: url('glitch-assets/sunrise.gif');
 }
 
 .white {
@@ -160,6 +161,11 @@ section {
 
 #section-1, #section-10 {
   padding-bottom: 70vh; /*small sections */
+}
+
+#section-1 {
+  padding-top: 40vh;
+  padding-bottom: 50vh;
 }
 
 .box {
@@ -186,6 +192,10 @@ img {
   margin-bottom: 10px;
 }
 
+.title-text {
+  width: 40vw;
+}
+
 /* Typewriter Animation */
 
 .typewriter {
@@ -202,11 +212,57 @@ img {
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
-  to { width: 50vw }
+  to { width: 100% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #8FCA54; }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 40px;
+    padding-top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+    .hero {
+    justify-content: center;
+  }
+
+  .anchor-nav {
+    display: none !important;
+  }
+
+  .box {
+    width: 85vw;
+  }
+
+  .box .data {
+    width: 85vw;
+  }
+
+  .title-text {
+    width: 85vw;
+  }
+
+  h3 {
+    font-size: 15px;
+    letter-spacing: 0;
+  }
+
+  #section-1 {
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: 100vh;
+    justify-content: center;
+  }
+
+  #section-1 .box {
+    padding-bottom: 0;
+  }
 }

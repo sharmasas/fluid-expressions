@@ -103,7 +103,6 @@ controller.scrollTo(function(target) {
 
 var sceneA = new ScrollMagic.Scene({triggerElement: "#trigger1"})
 					// trigger animation by adding a css class
-          .setPin("#animate1")					
           .setClassToggle("#animate1", "typewriter")
 					.addTo(controller);
 
@@ -193,17 +192,9 @@ anchor_nav.addEventListener('click', function(e) {
 
 // Fade in title function: https://www.jqueryscript.net/animation/Creating-A-Simple-Fade-In-Effect-On-Page-Load-with-jQuery.html
 (function($) {
-$.fn.pagefade = function(fadein, fadeout) {
+$.fn.pagefade = function(fadein) {
         this.css("display", "none");
         this.fadeIn(fadein);
-  $("a").click(function(event) {
-event.preventDefault();
-linkLocation = this.href;
-this.fadeOut(fadeout, redirectPage);
-  });
-  function redirectPage() {
-window.location.disabled= linkLocation;
-  }
   return this;
 };
 }(jQuery));
@@ -232,24 +223,21 @@ window.location.disabled= linkLocation;
 // });
 
 
-// FULL FUNCTION NEXT BUTTONS
+// NEXT BUTTON — scroll to the first section below current position
 
 $('.js-next').click(function(e) {
-
-  var selected = $(".js-list-item.active");
-  var anchors = $(".js-list-item");
-
-  var pos = anchors.index(selected);
-  var next = anchors.get(pos+1);
-  var prev = anchors.get(pos-1);
-  
-  $(selected).removeClass("active");
-  $(next).addClass("active");
-  
-  var id = $(next).attr("href");
-  controller.scrollTo(id);
-  
-	e.preventDefault();
+  e.preventDefault();
+  var scrollTop = $(window).scrollTop();
+  var nextSection = null;
+  $('section.full-screen').each(function() {
+    if ($(this).offset().top > scrollTop + 1) {
+      nextSection = this;
+      return false;
+    }
+  });
+  if (nextSection) {
+    controller.scrollTo('#' + nextSection.id);
+  }
 });
 
 // FULL PREVIOUS BUTTON
