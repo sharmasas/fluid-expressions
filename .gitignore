@@ -1,4 +1,14 @@
+# macOS
 .DS_Store
+
+# NODE
 node_modules/
+
+# ENV variables
 .env
 .env.*
+
+# migration docs
+MIGRATION.md
+NOTES.md
+CLAUDE.md
