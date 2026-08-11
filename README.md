@@ -1,26 +1,20 @@
 # Fluid Expressions
 
-## About this project
+A single-page, scroll-driven narrative about imagining what it would mean to make art in low Earth orbit.
 
-A single-page, scroll-driven narrative site presenting a first-person story about imagining life as an artist-in-residence in low Earth orbit.
+**[Live site →](https://fluid-expressions.netlify.app/)**
 
-## Migration changes
+The piece is told as a series of dated personal log entries from an artist-in-residence preparing for a mission, counting down from T-362 days to launch. It follows one thread of speculative design: a "memory capsule" built to hold and record water as it moves in microgravity, since water behaves so differently off-planet — clinging, wobbling, beading into perfect spheres instead of flowing the way it does on Earth. Underneath the sketches and build photos, the logs are really about the harder question of how you translate a felt, physical experience like weightlessness into something you can share with people who'll never have it, and about the vocabulary problem that comes with working somewhere between art and engineering.
 
-This project was originally hosted on Glitch. The following changes were made to move it to Netlify as a pure static site:
+Each log reveals itself as you scroll, with the text typing itself out and a left-hand nav tracking your position through the story.
 
-- **Vendored 5 JavaScript libraries** from CDN into `lib/`: jQuery 2.1.3, GSAP TweenMax 1.17.0, ScrollMagic 2.0.5, ScrollMagic GSAP plugin 2.0.5, GSAP ScrollToPlugin 1.17.0
-- **Vendored Google Fonts** (Darker Grotesque, Space Mono) into `lib/fonts/` — CSS and all `.woff2` files downloaded locally
-- **Removed Font Awesome** — the `<link>` was present in the original but the library was never actually used; all Font Awesome icon elements were inside HTML comments
-- **Repointed all images** from `cdn.glitch.com` URLs to local `glitch-assets/` files
-- **Deleted `deprecated/`** — ~40MB of unused full-resolution PNG originals from the original Glitch export
-- **Fixed broken pagefade click handler** — the original `script.js` had a `$("a").click()` block inside the `pagefade` function that called `this.fadeOut()` on a raw DOM element (not a jQuery object), throwing a TypeError on every link click and breaking scroll navigation
-- **Removed `.setPin()` from the Questions section** — ScrollMagic was pinning the h3 in that section, which caused it to overlay and block the scroll button on mobile
-- **Added responsive CSS** — mobile/tablet layout via a `@media (max-width: 768px)` block: left nav hidden, h1 and hero centered, box widths expanded, h3 font size reduced, typewriter animation width fixed
+## Built with
 
-## Known issues
+- Vanilla HTML, CSS, and JS
+- [ScrollMagic](https://scrollmagic.io/) — scroll-triggered scenes driving the typewriter text reveal and nav state
+- [GSAP](https://gsap.com/) (TweenMax + ScrollToPlugin) — eased smooth-scrolling between sections
+- jQuery — DOM and animation glue
+- Google Fonts: Darker Grotesque, Space Mono
 
-None.
-
-## Future Updates
-
-Adding connective tissue back to the speculative design artifact of the same name, as well as parabolic flight data and video elements.
+---
+Originally built on Glitch; later migrated to a static site.
